@@ -27,6 +27,10 @@
   width: 100%;
 }
 
+div.error{
+  color: red;
+}
+
 /* HEADER */
 
 .navbar-right {
@@ -97,9 +101,10 @@ input[type=password] {
   color: #FFFFFF;
   font-size: 18px;
   text-transform: uppercase;
-  background: #c91717;
+  background: green;
   padding: 10px 20px;
-  border: 0;
+  border: 3;
   margin-top: 6px;
+  border-color: black;
 }
 

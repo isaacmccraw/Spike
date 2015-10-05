@@ -10,6 +10,11 @@
   		<%= f.submit "Log in", class: "btn-submit" %>
 		<% end %>
 		
+		<p class="error">
+			<% flash.each do |name, msg| -%>
+	      	<%= content_tag :div, msg, class: "error" %>
+	    	<% end -%>
+	    </p>
     	</div>
 	</div>
 </div>
