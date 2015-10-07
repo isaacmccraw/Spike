@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20151007024315) do
 
   create_table "meals", force: true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "type_of_food"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

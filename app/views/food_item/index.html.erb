@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Make a food item</h1>
+
+    <%= form_for(@food_item) do |f| %>
+      <%= f.text_field :name, :placeholder => "Name" %>
+      <%= f.submit "Create a food_item", class: "btn-submit" %>
+    <% end %>
+
+</body>
+</html>

@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get 'home_page' => 'home_page#index'
 
+  get 'food_items' => 'food_item#new'
+  post 'food_items' => 'food_item#create'
+
+  get'meals' => 'meal#new'
+  post 'meals' => 'meal#create'
+
   resources :meal do
     resources :food_items
   end

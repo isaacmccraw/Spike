@@ -4,7 +4,7 @@ class CreateMeals < ActiveRecord::Migration
       t.belongs_to :user
       t.has_many :food_items
       t.string :name
-      t.string :type
+      t.string :type_of_food
       t.timestamps
     end
   end

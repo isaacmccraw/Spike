@@ -1,0 +1,15 @@
+<div class="login">
+  <div class="container">
+    <div class="form">
+
+<h1>Make a food item</h1>
+
+    <%= form_for(@food_item) do |f| %>
+      <%= f.text_field :name, :placeholder => "Name" %>
+      <%= f.submit "Create a food_item", class: "btn-submit" %>
+    <% end %>
+
+  
+    </div>
+  </div>
+</div>
