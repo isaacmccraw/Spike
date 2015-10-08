@@ -11,20 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007024315) do
+ActiveRecord::Schema.define(version: 20151007225750) do
 
   create_table "food_items", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "meal_id"
   end
+
+  add_index "food_items", ["meal_id"], name: "index_food_items_on_meal_id"
 
   create_table "meals", force: true do |t|
     t.string   "name"
     t.string   "type_of_food"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "fooditem_id"
   end
+
+  add_index "meals", ["fooditem_id"], name: "index_meals_on_fooditem_id"
+  add_index "meals", ["user_id"], name: "index_meals_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "first_name"
@@ -34,6 +42,9 @@ ActiveRecord::Schema.define(version: 20151007024315) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "meal_id"
   end
+
+  add_index "users", ["meal_id"], name: "index_users_on_meal_id"
 
 end

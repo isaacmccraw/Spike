@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #creates the web routes to navigate from page to page
   root 'home_page#index'
 
   get 'signup'  => 'users#new' 

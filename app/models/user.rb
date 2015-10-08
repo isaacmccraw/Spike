@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  #uses secure password
 	has_secure_password
-	has_many :meals
+	#relationship in database
+  has_many :meals
 end

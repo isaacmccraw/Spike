@@ -13,10 +13,13 @@
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <nav>
+        	<!-- creates a navbar for every page -->
           <ul class="nav navbar-nav navbar-right">
             <% if current_user %> 
                 <p class="navbar-text">Hello <%= current_user.first_name %>, Welcome!</p> 
-                <li><%= link_to "Home",   'home_page#index' %></li>
+                <li><%= link_to "Food Items", 'food_items#new' %></li>
+				<li><%= link_to "Meals", 'meals#new' %></li>
+				<li><%= link_to "Home",   'home_page#index' %></li>
                 <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
             <% else %> 
                 <li><%= link_to "Login", 'login' %></a></li> 

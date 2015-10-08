@@ -1,3 +1,4 @@
 class HomePageController < ApplicationController
-	before_action :require_user, only: [:index, :show]
+  #requires a user to be logged in
+	before_action :require_user
 end
